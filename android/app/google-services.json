@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "199435052123",
+    "project_id": "login-bfbc5",
+    "storage_bucket": "login-bfbc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199435052123:android:df978c74f51f5845b44b7e",
+        "android_client_info": {
+          "package_name": "com.example.crypto_bloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199435052123-6qfgdar8hjp386hi5irrq6q2js9v7gq5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.crypto_bloc",
+            "certificate_hash": "e3c26ea39147bca67958e2b1c75fffe1cc1275cf"
+          }
+        },
+        {
+          "client_id": "199435052123-vnl55bojrtq20vhh64mbhgfm5jd77hvc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC71oFAWCzVzYLK-u1jpfLEpl9KIA6LOHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199435052123-vnl55bojrtq20vhh64mbhgfm5jd77hvc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
