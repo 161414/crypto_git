@@ -15,21 +15,21 @@ class AuthenticationDetail {
     this.name,
   });
 
-  AuthenticationDetail copyWith({
-    bool? isValid,
-    String? uid,
-    String? photoUrl,
-    String? email,
-    String? name,
-  }) {
-    return AuthenticationDetail(
-      isValid: isValid ?? this.isValid,
-      uid: uid ?? this.uid,
-      photoUrl: photoUrl ?? this.photoUrl,
-      email: email ?? this.email,
-      name: name ?? this.name,
-    );
-  }
+  // AuthenticationDetail copyWith({
+  //   bool? isValid,
+  //   String? uid,
+  //   String? photoUrl,
+  //   String? email,
+  //   String? name,
+  // }) {
+  //   return AuthenticationDetail(
+  //     isValid: isValid ?? this.isValid,
+  //     uid: uid ?? this.uid,
+  //     photoUrl: photoUrl ?? this.photoUrl,
+  //     email: email ?? this.email,
+  //     name: name ?? this.name,
+  //   );
+  // }
 
   Map<String, dynamic> toMap() {
     return {

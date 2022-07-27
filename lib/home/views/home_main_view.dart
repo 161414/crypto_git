@@ -4,23 +4,30 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'news_screen.dart';
+
 class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final user= FirebaseAuth.instance.currentUser;
+    final user = FirebaseAuth.instance.currentUser;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Home'),
+          backgroundColor: Colors.black,
+          title: Text(
+            'Trending',
+            style: TextStyle(color: Colors.grey),
+          ),
           actions: [
             Row(
               children: [
                 Text('${user?.displayName}'),
                 IconButton(
                   icon: Icon(
-                    Icons.exit_to_app,
+                    Icons.exit_to_app_outlined,
                   ),
-                  onPressed: () => BlocProvider.of<AuthenticationBloc>(context).add(
+                  onPressed: () =>
+                      BlocProvider.of<AuthenticationBloc>(context).add(
                     AuthenticationExited(),
                   ),
                 ),
@@ -44,7 +51,7 @@ class HomeView extends StatelessWidget {
               } else if (state is AuthenticationLoading) {
                 return CircularProgressIndicator();
               } else if (state is AuthenticationSuccess) {
-                return Text('Welcome :${state.authenticationDetail.uid}');
+                return NewsPage();
               }
               return Text('Undefined state : ${state.runtimeType}');
             },
