@@ -21,6 +21,7 @@ dependencies:
   url_launcher: ^6.1.5
   timeago: ^3.2.2
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

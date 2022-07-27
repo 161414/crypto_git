@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class DescriptionView extends StatelessWidget {
@@ -29,19 +27,17 @@ class DescriptionView extends StatelessWidget {
                     spreadRadius: 1)
               ]),
           height: height * 0.15,
-
           child: Column(
             children: [
               Text(
                 state.results[index].title,
-                style: TextStyle(fontSize: 20,color: Colors.white),
+                style: TextStyle(fontSize: 20, color: Colors.white),
               ),
               SizedBox(
                 height: 10.0,
               ),
-              Text(
-                state.results[index].domain,style:TextStyle(fontSize: 20,color: Colors.white)
-              )
+              Text(state.results[index].domain,
+                  style: TextStyle(fontSize: 20, color: Colors.white))
             ],
           ),
         ),

@@ -50,6 +50,14 @@ class LoginMainView extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
+                        Text(
+                          'CRYPTO PANIC',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
                         OutlinedButton.icon(
                           style: ButtonStyle(
                               side: MaterialStateProperty.all(BorderSide(
@@ -60,8 +68,7 @@ class LoginMainView extends StatelessWidget {
                               BlocProvider.of<AuthenticationBloc>(context).add(
                             AuthenticationGoogleStarted(),
                           ),
-
-                          label:Text(
+                          label: Text(
                             'Login with Google',
                             style: TextStyle(color: Colors.white),
                           ),
