@@ -18,6 +18,8 @@ dependencies:
   flutter_bloc: ^7.0.1
   google_sign_in: ^5.0.5
   http: ^0.13.4
+  url_launcher: ^6.1.5
+  timeago: ^3.2.2
 
 dev_dependencies:
   flutter_test:

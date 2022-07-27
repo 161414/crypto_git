@@ -16,7 +16,7 @@ class HomeView extends StatelessWidget {
           backgroundColor: Colors.black,
           title: Text(
             'Trending',
-            style: TextStyle(color: Colors.grey),
+            style: TextStyle(color: Colors.white),
           ),
           actions: [
             Row(
@@ -28,8 +28,8 @@ class HomeView extends StatelessWidget {
                   ),
                   onPressed: () =>
                       BlocProvider.of<AuthenticationBloc>(context).add(
-                    AuthenticationExited(),
-                  ),
+                        AuthenticationExited(),
+                      ),
                 ),
               ],
             ),
