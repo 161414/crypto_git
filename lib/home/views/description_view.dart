@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:crypto_currency/constants/constants.dart';
+
+/// create a stateless widget to show the description of each news
 class DescriptionView extends StatelessWidget {
   const DescriptionView({this.state, this.index});
   final state;
@@ -7,37 +10,42 @@ class DescriptionView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
+        title: Text(
+          'Details',
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Container(
-          decoration: BoxDecoration(
-              color: Colors.black,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                    blurRadius: 1,
-                    color: Colors.black,
-                    offset: Offset(0, 2),
-                    spreadRadius: 1)
-              ]),
-          height: height * 0.15,
+          height: height * 0.30,
           child: Column(
             children: [
               Text(
+                /// fetch the title of corresponding news
                 state.results[index].title,
-                style: TextStyle(fontSize: 20, color: Colors.white),
+                style: kTextStyle,
               ),
-              SizedBox(
-                height: 10.0,
+              Row(
+                children: [
+                  Icon(
+                    Icons.link_outlined,
+                    color: Colors.grey,
+                    size: 15.0,
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        /// fetch the Domain of corresponding news
+                        '${state.results![index].domain}',
+                        textAlign: TextAlign.center,
+                        style: kDomainStyle,
+                      ))
+                ],
               ),
-              Text(state.results[index].domain,
-                  style: TextStyle(fontSize: 20, color: Colors.white))
             ],
           ),
         ),

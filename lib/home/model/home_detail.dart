@@ -49,11 +49,11 @@ class Result {
   });
 
   Kind? kind;
-  String domain;
+  String? domain;
   Source source;
-  String title;
+  String? title;
   DateTime publishedAt;
-  String slug;
+  String? slug;
   List<Currency>? currencies;
   int id;
   String url;
@@ -103,8 +103,8 @@ class Currency {
   });
 
   String code;
-  String title;
-  String slug;
+  String? title;
+  String? slug;
   String url;
 
   factory Currency.fromJson(Map<String, dynamic> json) => Currency(

@@ -15,10 +15,15 @@ class HomeLoadedState extends HomeState {
   dynamic previous;
   List<Result>? results;
 
-
   HomeLoadedState(this.count, this.next, this.previous, this.results);
 
   @override
-  // TODO: implement props
-  List<Object?> get props => [count, next, previous, results,];
+
+  /// implement props
+  List<Object?> get props => [
+        count,
+        next,
+        previous,
+        results,
+      ];
 }

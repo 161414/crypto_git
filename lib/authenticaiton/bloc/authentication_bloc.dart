@@ -1,9 +1,12 @@
 import 'dart:async';
 
-import 'package:authentication_with_bloc/authenticaiton/data/repositories/authenticaiton_repository.dart';
-import 'package:authentication_with_bloc/authenticaiton/models/authentication_detail.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+
+import 'package:crypto_currency/authenticaiton/models/authentication_detail.dart';
+
+import '../repository/authenticaiton_repository.dart';
+
 part 'authentication_event.dart';
 part 'authentication_state.dart';
 
@@ -38,9 +41,9 @@ class AuthenticationBloc
         });
       } catch (error) {
         print(
-            'Error occured while fetching authentication detail : ${error.toString()}');
+            'Error occurred while fetching authentication detail : ${error.toString()}');
         yield AuthenticationFailiure(
-            message: 'Error occrued while fetching auth detail');
+            message: 'Error occurred while fetching auth detail');
       }
     } else if (event is AuthenticationStateChanged) {
       if (event.authenticationDetail.isValid!) {
@@ -62,7 +65,7 @@ class AuthenticationBloc
           yield AuthenticationFailiure(message: 'User detail not found.');
         }
       } catch (error) {
-        print('Error occured while login with Google ${error.toString()}');
+        print('Error occurred while login with Google ${error.toString()}');
         yield AuthenticationFailiure(
           message: 'Unable to login with Google. Try again.',
         );
@@ -72,7 +75,7 @@ class AuthenticationBloc
         yield AuthenticationLoading();
         await _authenticationRepository.unAuthenticate();
       } catch (error) {
-        print('Error occured while logging out. : ${error.toString()}');
+        print('Error occurred while logging out. : ${error.toString()}');
         yield AuthenticationFailiure(
             message: 'Unable to logout. Please try again.');
       }
